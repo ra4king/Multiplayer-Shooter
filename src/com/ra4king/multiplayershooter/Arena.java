@@ -54,11 +54,11 @@ public class Arena extends GameWorld {
 		
 		game.setVersion(version/100.0);
 		
-		players = new HashMap<Integer,Player>();
+		players = new HashMap<>();
 		
-		bulletsToSend = new ArrayList<Bullet>();
+		bulletsToSend = new ArrayList<>();
 		
-		messages = new ArrayList<String>();
+		messages = new ArrayList<>();
 		
 		messages.add("Arrows to move, X or CTRL to shoot! Good luck and may the force be with you! :)");
 		
@@ -188,7 +188,6 @@ public class Arena extends GameWorld {
 			
 			Packet packet = new Packet();
 			packet.writeInt(version);
-			
 			packet.writeString(name);
 			sio.write(packet);
 			
